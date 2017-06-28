@@ -1,7 +1,7 @@
 <?php
 //
 // EntityClean plugin for TT-RSS
-// © 2017 Pseudocode (https://www.pseudocode.eu)
+// Â© 2017 Pseudocode (https://www.pseudocode.eu)
 //
 // Released through GitHub (https://github.com/pseudocoder/tt-rss-entityclean) under the Apache 2.0 license
 //
@@ -282,7 +282,8 @@ class EntityClean extends Plugin {
 			"/&spades;/i" => "&#9824;",
 			"/&clubs;/i" => "&#9827;",
 			"/&hearts;/i" => "&#9829;",
-			"/&diams;/i" => "&#9830;"
+			"/&diams;/i" => "&#9830;",
+			"/&(?!#?[a-z0-9]+;)/" => "&amp;" 
 			];
 
 		return preg_replace(array_keys($replace), array_values($replace), $feed_data);
